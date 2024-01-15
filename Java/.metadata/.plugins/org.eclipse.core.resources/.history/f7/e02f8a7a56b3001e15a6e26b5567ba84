@@ -1,0 +1,24 @@
+package ch02_type;
+
+public class Ex01_Variable {
+
+	public static void main(String[] args) {
+		int age;
+		age = 21;
+		int score = 88;		// 변수를 선언하면서 초기화를 동시에 해주는 것을 권장
+		var value = age * score;
+		System.out.println("age: " + age +", score: " + score + ", value: " + value);
+		
+		/*
+		 *  변수이름 규칙
+		 *  	1. 영문대소문자 및 한글 사용 가능
+		 *  	2. 특수문자는 두 가지만 사용가능: '_', '$'
+		 *  	3. 숫자 사용가능 *단, 변수의 첫번째는 올 수 없음*
+		 *  	4. 자바에서 사용중인 키워드 사용 불가
+		 * 권고사항 (지켜주면 좋겠어)
+		 * 		- 변수의 이름은 소문자로 시작한다
+		 * 		- 두개 이상의 단어가 결합된 경우 새 단어는 대문자로 시작(Camel notation)
+		 */	
+	}
+
+}
