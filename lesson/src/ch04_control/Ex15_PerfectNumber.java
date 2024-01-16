@@ -1,7 +1,5 @@
 package ch04_control;
 
-import java.util.Scanner;
-
 public class Ex15_PerfectNumber {
 
 	public static void main(String[] args) {
