@@ -6,7 +6,7 @@ public class Ex993_연습문제 {
 		int i = 10;
 		
 		while (i > 0) {
-			System.out.println(i);
+			System.out.println("i는: " + i);
 			i -= 2;
 		}
 	}
