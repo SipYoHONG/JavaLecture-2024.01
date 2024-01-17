@@ -51,6 +51,25 @@ public class Ex13_StringMethod2 {
 		fruitStr = "감, 배; 귤: 밤";
 		fruits = fruitStr.split("[,;:] ");	// 정규표현식 사용 가능
 		System.out.println(Arrays.toString(fruits));
+		
+		// PATH
+		String pathStr = "Program Files\\Common Files\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\NAT Service;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\Bandizip\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Tools\\jdk17\\bin;C:\\Users\\ghghg\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ghghg\\AppData\\Local\\afreeca;C:\\Users\\ghghg\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\ghghg\\AppData\\Roaming\\npm;C:\\Users\\ghghg\\AppData\\Local\\GitHubDesktop\\bin";
+		String[] pathArray = pathStr.split(";");
+		for (String path: pathArray)
+			System.out.println(path.replace("\\", "/"));
+		
+		/* 문자열 배열을 하나의 문자열로 생성 */
+		System.out.println(String.join(" -:- ","감, 배; 귤: 밤".split("[,;:] ") ));
+		
+		/* 문자열 좌우의 공백 제거 */
+		String dirtyText = " \t 자바 프로그래밍		\t \r\n";
+		String cleanText = dirtyText.trim();
+		System.out.println(cleanText + ", " + cleanText.length());
+		
+		
+		
 	}
+	
+	
 
 }
