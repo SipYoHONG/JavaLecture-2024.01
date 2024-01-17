@@ -1,0 +1,16 @@
+package ch04_control;
+
+import java.time.LocalDate;
+
+public class Ex03_FullAge {
+
+	public static void main(String[] args) {
+		LocalDate today = LocalDate.now();
+		System.out.println(today);
+		int year = today.getYear();
+		int month = today.getMonthValue();
+		int day = today.getDayOfMonth();
+		System.out.printf("%d. %d. %d%n", year, month, day);
+	}
+
+}

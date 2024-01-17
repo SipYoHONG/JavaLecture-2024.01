@@ -1,0 +1,16 @@
+package ch04_control;
+
+public class Ex12_While {
+
+	public static void main(String[] args) {
+		// 주사위 눈의 합이 15 이하면 계속 주사위를 굴리고, 초과하면 탈출
+		int diceSum = 0;
+		while (diceSum <= 15) {
+			int dice = 1 + (int) (6 * Math.random());
+			System.out.print(dice + " ");
+			diceSum += dice;
+		}
+		System.out.println(); System.out.println(diceSum);
+	}
+
+}

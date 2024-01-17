@@ -1,0 +1,11 @@
+package ch04_control;
+
+public class Ex04_Swith {
+
+	public static void main(String[] args) {
+		String s = "Hello";
+		System.out.println(s.equals("hello"));
+
+	}
+
+}

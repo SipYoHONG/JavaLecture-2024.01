@@ -1,0 +1,24 @@
+package ch04_control;
+
+import java.util.Scanner;
+
+public class Ex15_PerfectNumber {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.printf("자연수를 입력하시오 : ");
+		int num = Integer.parseInt(scan.nextLine());
+		scan.close();
+		
+		for (int i = 1; i <= num; i++) {
+			int sum = 0;
+			for(int k = 1; k < i; k++)
+				if(i%k == 0)
+					sum += k;
+		}
+		if (i == sum) {
+		System.out.printf("%d은 완전수입니다.\n",i);
+}
+	}
+}
+	

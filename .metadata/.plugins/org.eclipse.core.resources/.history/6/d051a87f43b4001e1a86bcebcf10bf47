@@ -1,0 +1,13 @@
+package ch04_control;
+
+public class Ex993_연습문제 {
+
+	public static void main(String[] args) {
+		int i = 10;
+		
+		while (i > 0) {
+			System.out.println("현재 i값: " + i);
+			i -= 2;
+		}
+	}
+}
