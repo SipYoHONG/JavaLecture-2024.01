@@ -2,6 +2,18 @@ package ch05_reference;
 
 
 public class Q03 {
+	
+//	public static boolean isPalindrome(String str) {
+//		return str.equals(reverse(str));
+//	
+//	}
+//	static String reverse(String str) {
+//		String reverseStr = "";
+//		for (int i = str.length() - 1; i >= 0; i--) {
+//			reverseStr += str.charAt(i);
+//		return reverseStr;
+//		}
+	
 	public static boolean isPalindrome(int num) {
 	    String numStr = Integer.toString(num);
 	    return numStr.equals(new StringBuilder(numStr).reverse().toString());

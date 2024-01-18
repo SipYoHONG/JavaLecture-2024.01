@@ -8,10 +8,11 @@ public class Customer {
 	// 생성자 (Constructor)
 	public Customer() { }
 	public Customer(int cid, String name, int age) {
-		this.cid = cid;
-		this.name = name;
-		this.age = age;
-		this.adult = age > 19 ? true : false; 
+//		this.cid = cid;
+//		this.name = name;
+//		this.age = age;
+//		this.adult = age > 19 ? true : false; 
+		this(cid, name, age, age > 19 ? true : false );
 	}
 	public Customer(int cid, String name, int age, boolean adult) {
 		this.cid = cid;
