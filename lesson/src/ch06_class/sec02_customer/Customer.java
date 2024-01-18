@@ -6,21 +6,27 @@ public class Customer {
 	private int age;
 	private boolean adult;
 	// 생성자 (Constructor)
-	// toString() method
-	// Getter/Setter method
-	
 	public Customer() { }
-	
+	public Customer(int cid, String name, int age) {
+		this.cid = cid;
+		this.name = name;
+		this.age = age;
+		this.adult = age > 19 ? true : false; 
+	}
 	public Customer(int cid, String name, int age, boolean adult) {
 		this.cid = cid;
 		this.name = name;
 		this.age = age;
 		this.adult = adult;
 	}
+	
+	// toString() method
 	@Override
 	public String toString() {
 		return "Customer [cid=" + cid + ", name=" + name + ", age=" + age + ", adult=" + adult + "]";
 	}
+	
+	// Getter/Setter method
 	public int getCid() {
 		return cid;
 	}
@@ -39,12 +45,12 @@ public class Customer {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	// public 이면 get이지만
+	// boolean이 되면 is로 변경되어서 나옴.
 	public boolean isAdult() {
 		return adult;
 	}
 	public void setAdult(boolean adult) {
 		this.adult = adult;
 	}
-	
-	
 }
