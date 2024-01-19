@@ -9,17 +9,16 @@ public class Interpark {
 	private int price;
 	
 	public Interpark () { }
-
 	public Interpark(int rank, String title, String author, String translator, String company, int price) {
 		this.rank = rank;
         this.title = title;
         this.author = author;
         this.translator = translator;
         this.company = company;
-        this.price = price;
-        
+        this.price = price;       
     }
-
+	//  translator가 없으면 출력하지 않고
+	
 	@Override
 	public String toString() {
 		return "Interpark [rank=" + rank + ", title=" + title + ", author=" + author 
