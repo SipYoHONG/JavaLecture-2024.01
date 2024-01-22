@@ -14,6 +14,7 @@ public class Main {
 		tv.turnOff();
 		
 		// 다형성 방법으로 타입을 부여할 수 있음
+		// 구현 객체가 무엇이든지 간에 동일한 코드를 사용할 수 있음
 		RemoteControllable rc = new Audio(); 
 		rc.turnOn(); rc.setVolume(7); rc.turnOff();
 		
