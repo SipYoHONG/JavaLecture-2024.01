@@ -111,12 +111,13 @@ public class Main {
 		System.out.println("출금액: ");
 		int money = scanner.nextInt();
 		
-		if (money > account.getBalance()) {
-			System.out.println("잔액이 부족합니다.");
-		} else {
+		if (account.getBalance() > money) {
 			account.setBalance(account.getBalance() - money);
 			System.out.println("출금이 성공되었습니다.");
 			System.out.println("현재 금액: " + account.getBalance());
+			
+		} else {
+			System.out.println("잔액이 부족합니다.");
 		}
 	}
 	
