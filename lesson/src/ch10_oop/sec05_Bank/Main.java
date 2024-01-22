@@ -37,13 +37,12 @@ public class Main {
 		System.out.println("---------");
 		System.out.println("계좌생성");
 		System.out.println("---------");	
-		
 		System.out.println("계좌번호: ");
-		String ano = scanner.nextLine();
+		String ano = scanner.next();
 		System.out.println("계좌주: ");
-		String owner = scanner.nextLine();
+		String owner = scanner.next();
 		System.out.println("초기입금액: ");
-		int balance = Integer.parseInt(scanner.nextLine());
+		int balance = scanner.nextInt();
 		
 		Account account = new Account(ano, owner, balance);
 		for (int i = 1; i < accountArray.length; i++) {
@@ -80,7 +79,7 @@ public class Main {
 		System.out.println("예금");
 		System.out.println("---------");	
 		System.out.println("계좌번호: ");
-		String ano = scanner.nextLine();
+		String ano = scanner.next();
 		
 		Account account = findAccount(ano);
 		if (account == null) {
@@ -88,7 +87,7 @@ public class Main {
 			return;
 		}
 		System.out.println("예금액: ");
-		int money = Integer.parseInt(scanner.nextLine());
+		int money = scanner.nextInt();
 		
 		account.setBalance(account.getBalance() + money);
 		System.out.println("예금이 성공되었습니다.");
@@ -102,7 +101,7 @@ public class Main {
 		System.out.println("출금");
 		System.out.println("---------");	
 		System.out.println("계좌번호: ");
-		String ano = scanner.nextLine();
+		String ano = scanner.next();
 		
 		Account account = findAccount(ano);
 		if (account == null) {
@@ -110,7 +109,7 @@ public class Main {
 			return;
 		}
 		System.out.println("출금액: ");
-		int money = Integer.parseInt(scanner.nextLine());
+		int money = scanner.nextInt();
 		
 		if (money > account.getBalance()) {
 			System.out.println("잔액이 부족합니다.");
