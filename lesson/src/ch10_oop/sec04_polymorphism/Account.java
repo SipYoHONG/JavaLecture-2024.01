@@ -1,4 +1,4 @@
-package ch10_oop.sec05_Bank;
+package ch10_oop.sec04_polymorphism;
 
 public class Account {
 	private String ano;
