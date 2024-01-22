@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="ch10_inheritance.Ex01_Package"/>
     <fullyQualifiedTypeName name="ch06_class.sec01_member.Member"/>
     <fullyQualifiedTypeName name="ch06_class.sec06_Interpark.Interpark"/>
@@ -13,4 +12,5 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="ch09_modifier.sec02_access.abc.B"/>
     <fullyQualifiedTypeName name="ch09_modifier.sec02_access.abc.A"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

@@ -13,7 +13,7 @@ public class Main {
 			System.out.println(" -------------------------------------------------- ");
 			System.out.println(" 1.계좌생성 | 2.계좌목록 | 3.예금 | 4.출금 | 5.종료 ");
 			System.out.println(" -------------------------------------------------- ");
-			System.out.print("선택> ");
+			System.out.print("선택: ");
 			
 			int selectNo = scanner.nextInt();
 			
@@ -36,14 +36,14 @@ public class Main {
 	private static void createAccount() {
 		System.out.println("---------");
 		System.out.println("계좌생성");
-		System.out.println("---------");
+		System.out.println("---------");	
 		
 		System.out.println("계좌번호: ");
-		String ano = scanner.next();
+		String ano = scanner.nextLine();
 		System.out.println("계좌주: ");
-		String owner = scanner.next();
+		String owner = scanner.nextLine();
 		System.out.println("초기입금액: ");
-		int balance = scanner.nextInt();
+		int balance = Integer.parseInt(scanner.nextLine());
 		
 		Account account = new Account(ano, owner, balance);
 		for (int i = 1; i < accountArray.length; i++) {
@@ -80,7 +80,7 @@ public class Main {
 		System.out.println("예금");
 		System.out.println("---------");	
 		System.out.println("계좌번호: ");
-		String ano = scanner.next();
+		String ano = scanner.nextLine();
 		
 		Account account = findAccount(ano);
 		if (account == null) {
@@ -88,7 +88,7 @@ public class Main {
 			return;
 		}
 		System.out.println("예금액: ");
-		int money = scanner.nextInt();
+		int money = Integer.parseInt(scanner.nextLine());
 		
 		account.setBalance(account.getBalance() + money);
 		System.out.println("예금이 성공되었습니다.");
@@ -102,7 +102,7 @@ public class Main {
 		System.out.println("출금");
 		System.out.println("---------");	
 		System.out.println("계좌번호: ");
-		String ano = scanner.next();
+		String ano = scanner.nextLine();
 		
 		Account account = findAccount(ano);
 		if (account == null) {
@@ -110,7 +110,7 @@ public class Main {
 			return;
 		}
 		System.out.println("출금액: ");
-		int money = scanner.nextInt();
+		int money = Integer.parseInt(scanner.nextLine());
 		
 		if (money > account.getBalance()) {
 			System.out.println("잔액이 부족합니다.");
