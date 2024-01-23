@@ -106,7 +106,7 @@ public class AccountServiceArrayImpl implements AccountService {
 		String ano = scan.nextLine();
 		Account account = findAccount(ano);
 		account.setIsDeleted(AccountService.DELETED);
-		
+
 	}
 
 }
