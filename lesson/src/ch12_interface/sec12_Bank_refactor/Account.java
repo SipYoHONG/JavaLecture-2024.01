@@ -4,13 +4,24 @@ public class Account {
 	private String ano;
 	private String owner;
 	private int balance;
+	private int isDeleted;
 	
+	public Account() { }
 	public Account(String ano, String owner, int balance) {
 		this.ano = ano;
 		this.owner = owner;
 		this.balance = balance;
+
 	}
 	
+	public Account(String ano, String owner, int balance, int isDeleted) {
+		super();
+		this.ano = ano;
+		this.owner = owner;
+		this.balance = balance;
+		this.isDeleted = isDeleted;
+	}
+
 	public String getAno() {
 		return ano;
 	}
@@ -28,5 +39,11 @@ public class Account {
 	}
 	public void setBalance(int balance) {
 		this.balance = balance;
+	}
+	public int getIsDeleted() {
+		return isDeleted;
+	}
+	public void setIsDeleted(int isDeleted) {
+		this.isDeleted = isDeleted;
 	}
 }

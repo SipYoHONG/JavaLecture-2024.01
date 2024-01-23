@@ -36,6 +36,8 @@ public class AccountServiceArrayImpl implements AccountService {
 
 		for (int i = 0; i < index; i++) {
 			Account acc = accountArray[i];
+			if (acc.getIsDeleted() == AccountService.DELETED)
+				continue;
 			System.out.printf("%s %-6s\t%,10d%n", acc.getAno(), acc.getOwner(), acc.getBalance());
 		}
 	}
@@ -88,10 +90,23 @@ public class AccountServiceArrayImpl implements AccountService {
 		for (Account acc : accountArray) {
 			if (acc == null)
 				return null;
-			if (ano.equals(acc.getAno()))
+			if (ano.equals(acc.getAno()) && acc.getIsDeleted() != AccountService.DELETED)
 				return acc;
 		}
 		return null;
+	}
+
+	@Override
+	public void delete() {
+		System.out.println("-----------");
+		System.out.println("   삭제");
+		System.out.println("-----------");
+
+		System.out.print("계좌 번호> ");
+		String ano = scan.nextLine();
+		Account account = findAccount(ano);
+		account.setIsDeleted(AccountService.DELETED);
+		
 	}
 
 }

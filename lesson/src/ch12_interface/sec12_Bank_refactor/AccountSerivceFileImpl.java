@@ -33,4 +33,10 @@ public class AccountSerivceFileImpl implements AccountService {
 		return null;
 	}
 
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
