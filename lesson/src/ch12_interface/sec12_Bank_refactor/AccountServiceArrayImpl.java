@@ -1,19 +1,25 @@
-package ch12_interface.sec11_bank;
+package ch12_interface.sec12_Bank_refactor;
 
 import java.util.Scanner;
 
-public class AccountServiceImpl implements AccountService {
-    private static Scanner scan = new Scanner(System.in);
-    private static int index = 3;
+public class AccountServiceArrayImpl implements AccountService {
+	private static Account[] accountArray = new Account[100];
+	private static Scanner scan = new Scanner(System.in);
+	private static int index = 3;
 
+	public AccountServiceArrayImpl() {
+		accountArray[0] = new Account("1000", "제임스", 10000);
+		accountArray[1] = new Account("1001", "마리", 300000);
+		accountArray[2] = new Account("1002", "브라이언", 2000000);
+	}
 
 	@Override
-	public void createAccount(Account[] accountArray) {
+	public void createAccount() {
 		System.out.println("-----------");
 		System.out.println(" 계좌 생성");
 		System.out.println("-----------");
 
-		String ano = "" + (1000 + index); // index : 현재 빈 곳을 가리킴
+		String ano = "" + (1000 + index);
 		System.out.print("계좌주 이름> ");
 		String owner = scan.nextLine();
 		System.out.print("최초 입금액> ");
@@ -21,9 +27,9 @@ public class AccountServiceImpl implements AccountService {
 		Account account = new Account(ano, owner, balance);
 		accountArray[index++] = account;
 	}
-		
+
 	@Override
-	public void accountList(Account[] accountArray) {
+	public void accountList() {
 		System.out.println("-----------");
 		System.out.println(" 계좌 목록");
 		System.out.println("-----------");
@@ -35,7 +41,7 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public void deposit(Account[] accountArray) {
+	public void deposit() {
 		System.out.println("-----------");
 		System.out.println("   입금");
 		System.out.println("-----------");
@@ -44,18 +50,18 @@ public class AccountServiceImpl implements AccountService {
 		String ano = scan.nextLine();
 		System.out.print("입금액> ");
 		int balance = Integer.parseInt(scan.nextLine());
-		Account account = findAccount(ano, accountArray);
+		Account account = findAccount(ano);
 		if (account == null) {
 			System.out.println("계좌번호를 확인하세요.");
 			return;
 		}
 		account.setBalance(balance + account.getBalance());
 		System.out.println("입금이 완료되었습니다.");
+
 	}
 
-
 	@Override
-	public void withdraw(Account[] accountArray) {
+	public void withdraw() {
 		System.out.println("-----------");
 		System.out.println("   출금");
 		System.out.println("-----------");
@@ -64,7 +70,7 @@ public class AccountServiceImpl implements AccountService {
 		String ano = scan.nextLine();
 		System.out.print("출금액> ");
 		int balance = Integer.parseInt(scan.nextLine());
-		Account account = findAccount(ano, accountArray);
+		Account account = findAccount(ano);
 		if (account == null) {
 			System.out.println("계좌번호를 확인하세요.");
 			return;
@@ -76,8 +82,9 @@ public class AccountServiceImpl implements AccountService {
 			System.out.println("잔액이 부족합니다.");
 		}
 	}
+
 	@Override
-	public Account findAccount(String ano, Account[] accountArray) {
+	public Account findAccount(String ano) {
 		for (Account acc : accountArray) {
 			if (acc == null)
 				return null;
@@ -86,4 +93,5 @@ public class AccountServiceImpl implements AccountService {
 		}
 		return null;
 	}
+
 }

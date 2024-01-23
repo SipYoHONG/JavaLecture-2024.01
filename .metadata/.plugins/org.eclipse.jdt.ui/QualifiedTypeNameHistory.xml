@@ -21,4 +21,6 @@
     <fullyQualifiedTypeName name="ch12_interface.sec04_dao.CustomerDaoOracleImpl"/>
     <fullyQualifiedTypeName name="ch12_interface.sec11_bank.AccountService"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ch12_interface.sec12_Bankrefecter.AccountService"/>
+    <fullyQualifiedTypeName name="ch12_interface.sec12_Bankrefecter.AccountServiceArrayImpl"/>
 </qualifiedTypeNameHistroy>
