@@ -9,7 +9,6 @@ public class Message {
 	
 	public Message() { }
 	public Message(int mid, String content, String writer, String genTime) {
-		super();
 		this.mid = mid;
 		this.content = content;
 		this.writer = writer;

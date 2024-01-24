@@ -8,7 +8,6 @@ public class MessageServiceArrayImpl implements MessageService {
 	static int index = 5;
 
 	public MessageServiceArrayImpl() {
-		messageArray = new Message[5];
 		messageArray[0] = new Message(1, "처음하는", "홍시표", "2024-01-23");
 		messageArray[1] = new Message(2, "자바는", "시표", "2024-01-23");
 		messageArray[2] = new Message(3, "복잡하지만", "홍사표", "2024-01-23");
