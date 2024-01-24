@@ -1,11 +1,11 @@
-package ch17_collection.part1_list.sec03_MemberArray;
+package ch17_collection.part1_list.sec03_Message;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MessageMain {
+public class MessageExample {
 
 	public static void main(String[] args) {
 		// 제일 먼저!!! 시작할때 빈 list를 만들어 준다!
@@ -21,10 +21,18 @@ public class MessageMain {
 			Message msg = new Message(2 + i, "내용" + i, "저자" + i, LocalDateTime.now(), 0);
 			list.add(msg);
 		}
-		
-		
+
 		list = generaMessages();
 		for (Message m : list)
+			System.out.println(m);
+
+		// 이름이 3글자 이상인 사람의 글
+		List<Message> newList = new ArrayList<Message>();
+		for (Message msg : list) {
+			if (msg.getWriter().length() >= 3)
+				newList.add(msg);
+		}
+		for (Message m : newList)
 			System.out.println(m);
 	}
 
@@ -40,6 +48,7 @@ public class MessageMain {
 			Message msg = new Message(i, content, writer, LocalDateTime.now(), 0);
 			list.add(msg);
 		}
+		scan.close();
 		return list;
 	}
 

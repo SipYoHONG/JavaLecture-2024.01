@@ -1,4 +1,4 @@
-package ch17_collection.part1_list.sec03_MemberArray;
+package ch17_collection.part1_list.sec03_Message;
 
 import java.time.LocalDateTime;
 
@@ -8,10 +8,15 @@ public class Message {
 	private String writer;
 	private LocalDateTime modTime;
 	private int isDeleted;
-	
-	public Message () { }
-	public Message(int mid, String content, String writer, LocalDateTime modTime, int isDeleted) {
 
+	public Message() { }
+	public Message(String content, String writer) {
+		this.content = content;
+		this.writer = writer;
+		this.modTime = LocalDateTime.now();
+	}
+
+	public Message(int mid, String content, String writer, LocalDateTime modTime, int isDeleted) {
 		this.mid = mid;
 		this.content = content;
 		this.writer = writer;
@@ -21,9 +26,8 @@ public class Message {
 
 	@Override
 	public String toString() {
-		return "Message [mid=" + mid + ", content=" + content + ", writer=" + writer
-				+ ", modTime=" + modTime.toString().substring(0, 19).replace("T", "")
-				+ ", isDeleted=" + isDeleted + "]";
+		return "Message [mid=" + mid + ", content=" + content + ", writer=" + writer + ", modTime="
+				+ modTime.toString().substring(0, 19).replace("T", "") + ", isDeleted=" + isDeleted + "]";
 	}
 
 	public int getMid() {
