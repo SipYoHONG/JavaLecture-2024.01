@@ -12,7 +12,7 @@ public class MessageServiceArrayImpl implements MessageService {
 		messageArray[0] = new Message(1, "처음하는", "홍시표", "2024-01-23");
 		messageArray[1] = new Message(2, "자바는", "시표", "2024-01-23");
 		messageArray[2] = new Message(3, "복잡하지만", "홍사표", "2024-01-23");
-		messageArray[3] = new Message(4, "즐겁게", "홍표", "2024-01-23");
+		messageArray[3] = new Message(4, "재밌게", "홍표", "2024-01-23");
 		messageArray[4] = new Message(5, "열심히하자", "홍시범", "2024-01-23");
 	}
 

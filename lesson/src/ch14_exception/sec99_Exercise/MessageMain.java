@@ -9,20 +9,20 @@ public class MessageMain {
 	
 	public static void main(String[] args) {
 		while (true) {
-			System.out.println("\n===== 메시지 서비스 =====");
+			System.out.println("+=========================+");
 			System.out.println("1. 전체 메시지 목록");
 			System.out.println("2. 작성자로 메시지 필터링");
 			System.out.println("3. 메시지 추가");
 			System.out.println("4. 메시지 수정");
 			System.out.println("5. 메시지 삭제");
 			System.out.println("6. 메시지 조회");
-			System.out.println("0. 종료");
-			System.out.println("\n=========================");
+			System.out.println("7. 종료");
+			System.out.println("+=========================+");
 			System.out.print("원하는 기능을 선택하세요: ");
 
 			int choice = scanner.nextInt();
-			scanner.nextLine(); // 버퍼 비우기
-
+			scanner.nextLine(); 
+			
 			switch (choice) {
 			case 1:
 				messageService.messageList();
@@ -46,7 +46,7 @@ public class MessageMain {
 			case 4:
 				System.out.print("수정할 메시지의 ID를 입력하세요: ");
 				int updateMid = scanner.nextInt();
-				scanner.nextLine(); // 버퍼 비우기
+				scanner.nextLine(); 
 				Message updateMessage = messageService.findByMid(updateMid);
 
 				if (updateMessage != null) {
@@ -81,7 +81,7 @@ public class MessageMain {
 					System.out.println("해당하는 ID의 메시지를 찾을 수 없습니다.");
 				}
 				break;
-			case 0:
+			case 7:
 				System.out.println("프로그램을 종료합니다.");
 				System.exit(0);
 			default:
