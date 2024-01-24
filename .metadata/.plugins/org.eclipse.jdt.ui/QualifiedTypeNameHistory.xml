@@ -2,13 +2,10 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="ch10_inheritance.Ex01_Package"/>
     <fullyQualifiedTypeName name="ch06_class.sec01_member.Member"/>
     <fullyQualifiedTypeName name="ch06_class.sec06_Interpark.Interpark"/>
     <fullyQualifiedTypeName name="ch06_class.sec05_Melon.Melonchart"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="ch09_modifier.sec02_access.abc.B"/>
     <fullyQualifiedTypeName name="ch09_modifier.sec02_access.abc.A"/>
     <fullyQualifiedTypeName name="java.util.Objects"/>
@@ -19,7 +16,6 @@
     <fullyQualifiedTypeName name="ch12_interface.sec04_dao.CustomerDaopMySQLImpl"/>
     <fullyQualifiedTypeName name="ch12_interface.sec04_dao.CustomerDaoOracleImpl"/>
     <fullyQualifiedTypeName name="ch12_interface.sec11_bank.AccountService"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="ch12_interface.sec12_Bankrefecter.AccountService"/>
     <fullyQualifiedTypeName name="ch12_interface.sec12_Bankrefecter.AccountServiceArrayImpl"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
@@ -36,8 +32,17 @@
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="ch14_exception.sec09_class.MyRuntimeException"/>
     <fullyQualifiedTypeName name="ch14_exception.sec09_class.MyException"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="ch14_exception.sec99_Exercise.Message"/>
     <fullyQualifiedTypeName name="ch14_exception.sec99_Exercise.MessageService"/>
     <fullyQualifiedTypeName name="ch14_exception.sec99_Exercise.MessageServiceArrayImpl"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.net.MulticastSocket"/>
+    <fullyQualifiedTypeName name="ch17_collection.part1_list.sec03_MemberArray.MessageService"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="ch17_collection.part1_list.sec03_Message.MessageService"/>
+    <fullyQualifiedTypeName name="ch17_collection.part1_list.sec03_Message.MessageServiceListImpl"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
