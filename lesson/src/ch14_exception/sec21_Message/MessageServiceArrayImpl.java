@@ -1,4 +1,4 @@
-package ch14_exception.sec99_Exercise;
+package ch14_exception.sec21_Message;
 
 import java.util.Scanner;
 
