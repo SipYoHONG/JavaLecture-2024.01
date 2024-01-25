@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
-    <fullyQualifiedTypeName name="ch10_inheritance.Ex01_Package"/>
     <fullyQualifiedTypeName name="ch06_class.sec01_member.Member"/>
     <fullyQualifiedTypeName name="ch06_class.sec06_Interpark.Interpark"/>
     <fullyQualifiedTypeName name="ch06_class.sec05_Melon.Melonchart"/>
     <fullyQualifiedTypeName name="ch09_modifier.sec02_access.abc.B"/>
     <fullyQualifiedTypeName name="ch09_modifier.sec02_access.abc.A"/>
-    <fullyQualifiedTypeName name="java.util.Objects"/>
     <fullyQualifiedTypeName name="ch12_interface.sec02_interface.Television"/>
     <fullyQualifiedTypeName name="java.lang.Readable"/>
     <fullyQualifiedTypeName name="ch12_interface.sec02_interface.RemoteControllable"/>
@@ -39,10 +35,29 @@
     <fullyQualifiedTypeName name="java.net.MulticastSocket"/>
     <fullyQualifiedTypeName name="ch17_collection.part1_list.sec03_MemberArray.MessageService"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="ch17_collection.part1_list.sec03_Message.MessageService"/>
     <fullyQualifiedTypeName name="ch17_collection.part1_list.sec03_Message.MessageServiceListImpl"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Objects"/>
+    <fullyQualifiedTypeName name="java.util.TreeSet"/>
+    <fullyQualifiedTypeName name="java.awt.peer.SystemTrayPeer"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="java.security.KeyStore.Entry"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="ch17_collection.part2_Set.sec12_member.Member"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.TreeMap"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.Properties"/>
+    <fullyQualifiedTypeName name="ch17_collection.part3_map.sec04_properties.Ex01_Properties"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="ch10_oop.sec02_constructor.Student"/>
 </qualifiedTypeNameHistroy>
