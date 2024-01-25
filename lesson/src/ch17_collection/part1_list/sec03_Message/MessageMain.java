@@ -21,7 +21,9 @@ public class MessageMain {
             switch(selectNo) {
                 case 1:
                 	List<Message> allMessages = messageService.getMessageListAll();
-                    System.out.println("메인에서 모든 메세지: " + allMessages);
+//					list = messageService.getMessageListAll();
+//					list.forEach(x -> System.out.println(x));
+//					System.out.println();
                     break;                 
                 case 2:
                     System.out.println("---------------");
@@ -30,7 +32,10 @@ public class MessageMain {
                     System.out.print("Writer 이름> ");
                     String writer = scan.nextLine();
                     List<Message> writerMessages = messageService.getMessageListByWriter(writer);
-                    System.out.println("메인에서 작성자별 메세지: " + writerMessages);
+//				 	writer = scan.nextLine();
+//					list = messageService.getMessageListByWriter(writer);
+//					list.forEach(x -> System.out.println(x));
+//					System.out.println();
                     break;
                 case 3:
                     System.out.println("---------------");
@@ -42,6 +47,7 @@ public class MessageMain {
                     String content = scan.nextLine();
                     Message newMessage = new Message(content, newWriter);
                     messageService.insertMessage(newMessage);
+                    //이 부분은 강사님이랑 비슷한데 Message, String 쓰면서 new 붙인게 조금 다름!
                     break;
                 case 4:
                     System.out.println("---------------");
@@ -49,10 +55,13 @@ public class MessageMain {
                     System.out.println("---------------");
                     System.out.print("메세지 ID> ");
                     mid = Integer.parseInt(scan.nextLine());
+//                  message = messageService.findByMid(mid);									<- 이렇게 선언을 했다는 가정하에
                     Message updateMessage = messageService.findByMid(mid);
-                    System.out.print("Writer 이름(" + updateMessage.getWriter() + ")> ");
+                    System.out.print("Writer 이름(" + updateMessage.getWriter() + ")> ");	// <- updateMessage가 아니라 그냥 message로 하면 밑에로 처리하면됨
+//                  writer = scan.nextLine();
                     String updatedWriter = scan.nextLine();
-                    System.out.print("메세지 내용(" + updateMessage.getContent() + ")> ");
+                    System.out.print("메세지 내용(" + updateMessage.getContent() + ")> ");	// <- updateMessage가 아니라 그냥 message로 하면 밑에로 처리하면됨
+//                  content = scan.nextLine();
                     String updatedContent = scan.nextLine();
                     updateMessage.setWriter(updatedWriter);
                     updateMessage.setContent(updatedContent);

@@ -42,7 +42,7 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="ch17_collection.part1_list.sec03_Message.MessageService"/>
     <fullyQualifiedTypeName name="ch17_collection.part1_list.sec03_Message.MessageServiceListImpl"/>
-    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

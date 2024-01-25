@@ -10,12 +10,24 @@ public class Message {
 	private int isDeleted;
 
 	public Message() { }
+	
 	public Message(String content, String writer) {
 		this.content = content;
 		this.writer = writer;
-		this.modTime = LocalDateTime.now();
 	}
-
+	// for Update
+	public Message(int mid, String content, String writer) {
+		this.mid = mid;
+		this.content = content;
+		this.writer = writer;
+	}
+	// for Read
+	public Message(int mid, String content, String writer, LocalDateTime modTime) {
+		this.mid = mid;
+		this.content = content;
+		this.writer = writer;
+		this.modTime = modTime;
+	}
 	public Message(int mid, String content, String writer, LocalDateTime modTime, int isDeleted) {
 		this.mid = mid;
 		this.content = content;
@@ -26,8 +38,7 @@ public class Message {
 
 	@Override
 	public String toString() {
-		return "Message [mid=" + mid + ", content=" + content + ", writer=" + writer + ", modTime="
-				+ modTime.toString().substring(0, 19).replace("T", "") + ", isDeleted=" + isDeleted + "]";
+		return String.format("%d %s %s %s", mid, content, writer, modTime.toString().replaceAll("T", " ").substring(0, 16));
 	}
 
 	public int getMid() {

@@ -4,11 +4,10 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageServiceListImpl implements MessageService {
+public class MessageServiceListImpl implements MessageService { 
 	private List<Message> messageList = new ArrayList<Message>();
 
 	public MessageServiceListImpl() {
-		messageList = new ArrayList<>();
 		messageList.add(new Message(101, "Java 세계에 오신 것을 환영합니다.", "James", LocalDateTime.now(), 0));
 		messageList.add(new Message(102, "안녕하세요? 만나서 반갑습니다.", "Maria", LocalDateTime.now(), 0));
 		messageList.add(new Message(103, "좋은 하루 되세요.", "Brian", LocalDateTime.now(), 0));
@@ -28,7 +27,6 @@ public class MessageServiceListImpl implements MessageService {
 
 	@Override
 	public List<Message> getMessageListAll() {
-		 System.out.println("메세지 서비스에서 모든 메세지를 가져옵니다...");
 		    List<Message> allMessages = new ArrayList<>();
 		    allMessages.addAll(messageList);
 		    System.out.println("모든 메세지: " + allMessages);
@@ -37,7 +35,6 @@ public class MessageServiceListImpl implements MessageService {
 
 	@Override
 	public List<Message> getMessageListByWriter(String writer) {
-	    System.out.println("메세지 서비스에서 작성자별 메세지를 가져옵니다...");
 	    List<Message> result = new ArrayList<>();
 	    for (Message message : messageList) {
 	        if (message.getWriter().equals(writer) && message.getIsDeleted() != MessageService.DELETED) {
