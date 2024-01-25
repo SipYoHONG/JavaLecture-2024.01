@@ -1,4 +1,4 @@
-package ch17_collection.ex;
+package ch17_collection.ex03;
 
 import java.util.HashSet;
 import java.util.Iterator;
