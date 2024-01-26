@@ -14,7 +14,8 @@ public class Student implements Comparable<Student> {
 	public int compareTo(Student o) {
 		if(o instanceof Student) {
 			Student other = (Student) o;
-			return Integer.compare(this.score, other.score);
+			return this.score - other.score;
+//			return Integer.compare(this.score, other.score);
 		}
 		return 0;
 	}

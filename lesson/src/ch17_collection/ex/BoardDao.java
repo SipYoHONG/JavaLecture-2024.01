@@ -21,13 +21,4 @@ public class BoardDao {
 		}
 		return resultList;
 	}
-
-	public Board findByTitle(String title) {
-		for (Board board : boardList) {
-			if (board.getTitle().equals(title)) {
-				return board;
-			}
-		}
-		return null;
-	}
 }

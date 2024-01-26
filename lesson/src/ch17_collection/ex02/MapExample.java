@@ -27,7 +27,6 @@ public class MapExample {
 		}
 		
 		int sum = map.values().stream().mapToInt(Integer::intValue).sum();
-
 		double avg = sum / map.size();
 
 		// 결과 출력
