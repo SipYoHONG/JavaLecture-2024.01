@@ -11,10 +11,10 @@ public class Exercise {
 
 	public static void main(String[] args) throws IOException {
 		String url = "https://www.melon.com/chart/index.htm";
-		Document doc = Jsoup.connect(url)
+		Document doc = Jsoup.connect(url).get();
 //					.userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Whale/3.24.223.21 Safari/537.36")
 //					.header("scheme","https")
-					.get();
+					
 		
 		Elements trs = doc.select(".service_list_song.type02.d_song_list > table > tbody > tr");
 		System.out.println(trs.size());

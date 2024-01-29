@@ -9,12 +9,17 @@ public class MelonChart {
 	
 	public MelonChart() { }
 	public MelonChart(int rank, String title, String artist, String album, String imgSrc) {
-		super();
 		this.rank = rank;
 		this.title = title;
 		this.artist = artist;
 		this.album = album;
 		this.imgSrc = imgSrc;
+	}
+	
+	@Override
+	public String toString() {
+		return "MelonChart [rank=" + rank + ", title=" + title + ", artist=" + artist + ", album=" + album + ", imgSrc="
+				+ imgSrc + "]";
 	}
 	
 	public int getRank() {
@@ -47,13 +52,4 @@ public class MelonChart {
 	public void setImgSrc(String imgSrc) {
 		this.imgSrc = imgSrc;
 	}
-	@Override
-	public String toString() {
-		
-		return String.format("%2d %s   %s  %s  %,d", rank, title, artist, album, imgSrc);
-//		return "MelonChart [rank=" + rank + ", title=" + title + ", artist=" + artist + ", album=" + album + ", imgSrc="
-//				+ imgSrc + "]";
-	}
-	
-	
 }
