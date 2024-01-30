@@ -2,7 +2,7 @@
 <?metadataRepository version='1.2.0'?>
 <repository name='update site: file:/C:/Users/human-02/Documents/GitHub/JavaLecture-2024.01/eclipse/configuration/org.eclipse.osgi/391/data/listener_1925729951/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1705536732592'/>
+    <property name='p2.timestamp' value='1706572358744'/>
     <property name='site.checksum' value='0'/>
   </properties>
 </repository>

@@ -10,7 +10,7 @@ import java.util.List;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-		String filename = "C:/Users/ghghg/Documents/GitHub/JavaLecture-2024.01/lesson/src/ch18_io/sec10_object_io/product.ser";
+		String filename = "C:/Users/human-02/Documents/GitHub/JavaLecture-2024.01/lesson/src/ch18_io/product.ser";
 		
 		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename));
 		Product p1 = new Product("노트북", 1500000);

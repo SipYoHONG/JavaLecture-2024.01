@@ -12,7 +12,7 @@ import org.jsoup.select.Elements;
 
 public class Exercise {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		String url = "https://www.human.or.kr/";
 		Document doc = Jsoup.connect(url).get();
 

@@ -1,5 +1,4 @@
-INDEX VERSION 1.134+C:\Users\ghghg\Documents\GitHub\JavaLecture-2024.01\.metadata\.plugins\org.eclipse.jdt.core
-2628552089.index
-2685134247.index
+INDEX VERSION 1.134+C:\Users\human-02\Documents\GitHub\JavaLecture-2024.01\.metadata\.plugins\org.eclipse.jdt.core
+760876107.index
 1865797976.index
 816810477.index
