@@ -7,7 +7,7 @@ public class Q03 {
 		int total = 0;
 		
 		for(int i= 2; i <= 100; i++) {
-			if(isPrime(i));
+			if(isPrime(i))
 			total += i;
 		}
 		System.out.println("소수의 합: " + total);
