@@ -7,7 +7,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.net.http.HttpHeaders;
+import java.util.HashMap;
 import java.util.Map;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 
 /**
@@ -27,12 +32,11 @@ public class KakaoLocalApi {
 		URL url = new URL(apiUrl);
 		// 헤더 설정
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-		conn.setRequestMethod("GET");
+//		conn.setRequestMethod("GET");
 		conn.setRequestProperty("Authorization", "KakaoAK " + kakaoKey);
-		conn.setRequestProperty("content-type", "application/json");
-		conn.setDoOutput(true);
-		conn.setUseCaches(false);
-		conn.setDefaultUseCaches(false);
+//		conn.setRequestProperty("content-type", "application/json");
+//		conn.setDoOutput(true);
+
 		
 		// 응답 결과 확인
 		int responseCode = conn.getResponseCode();
@@ -44,9 +48,23 @@ public class KakaoLocalApi {
 		while((line = br.readLine()) != null)
 			sb.append(line);
 		br.close();
-		System.out.println(sb.toString());
+//		System.out.println(sb.toString());
 		
-		return null;
+		// JSON 데이터에서 원하는 값 추출하기
+		JSONParser parser = new JSONParser();
+    	JSONObject object = (JSONObject) parser.parse(sb.toString());
+    	JSONArray documents = (JSONArray) object.get("documents");
+    	JSONObject item = (JSONObject) documents.get(0);
+//		System.out.println(item.keySet());	// [address, address_type, x, y, address_name, road_address]
+		String lon_ = (String) item.get("x");
+		String lat_ = (String) item.get("y");
+//		System.out.println(lon_ + ", " + lat_);
+		
+		
+		Map<String, Double> map = new HashMap<String, Double>();
+		map.put("lon", Double.parseDouble(lon_));
+		map.put("lat",Double.parseDouble(lat_));
+		return map;
 	}
 
 }

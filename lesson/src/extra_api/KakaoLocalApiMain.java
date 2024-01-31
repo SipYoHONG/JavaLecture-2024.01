@@ -1,20 +1,12 @@
 package extra_api;
 
+import java.util.Map;
+
 public class KakaoLocalApiMain {
 
-	    public static void main(String[] args) {
-	        try {
-	            // 도로명주소를 입력하세요
-	            String address = "경기도 수원시 인계동";
-	            
-	            // KakaoLocalApi 인스턴스 생성
-	            KakaoLocalApi kakaoApi = new KakaoLocalApi();
-	            
-	            // getGeocode 메소드 호출
-	            kakaoApi.getGeocode(address);
-
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	        }
-	    }
+	public static void main(String[] args) throws Exception {
+		KakaoLocalApi api = new KakaoLocalApi();
+		Map<String, Double> map = api.getGeocode("경기도 수원시 영통구 도청로 30 (이의동)");
+		System.out.println(map);
 	}
+}
