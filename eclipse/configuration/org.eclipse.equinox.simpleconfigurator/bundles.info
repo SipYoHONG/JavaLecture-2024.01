@@ -8,6 +8,7 @@ biz.aQute.bnd.util,7.0.0.202310060912,file:/C:/Users/human-02/.p2/pool/plugins/b
 biz.aQute.bndlib,7.0.0.202310060912,file:/C:/Users/human-02/.p2/pool/plugins/biz.aQute.bndlib_7.0.0.202310060912.jar,4,false
 ch.qos.logback.classic,1.4.11,file:/C:/Users/human-02/.p2/pool/plugins/ch.qos.logback.classic_1.4.11.jar,2,true
 ch.qos.logback.core,1.4.11,file:/C:/Users/human-02/.p2/pool/plugins/ch.qos.logback.core_1.4.11.jar,4,false
+com.evolvedbinary.thirdparty.org.apache.xmlrpc.xmlrpc-client,5.0.0,file:/C:/Users/human-02/.p2/pool/plugins/com.evolvedbinary.thirdparty.org.apache.xmlrpc.xmlrpc-client_5.0.0.jar,4,false
 com.google.gson,2.10.1.v20230109-0753,file:/C:/Users/human-02/.p2/pool/plugins/com.google.gson_2.10.1.v20230109-0753.jar,4,false
 com.google.guava,32.1.3.jre,file:/C:/Users/human-02/.p2/pool/plugins/com.google.guava_32.1.3.jre.jar,4,false
 com.google.guava.failureaccess,1.0.2,file:/C:/Users/human-02/.p2/pool/plugins/com.google.guava.failureaccess_1.0.2.jar,4,false
@@ -107,8 +108,6 @@ org.apache.xerces,2.12.2.v20230928-1306,file:/C:/Users/human-02/.p2/pool/plugins
 org.apache.xml.resolver,1.2.0.v20230928-1222,file:/C:/Users/human-02/.p2/pool/plugins/org.apache.xml.resolver_1.2.0.v20230928-1222.jar,4,false
 org.apache.xml.serializer,2.7.1.v201005080400,file:/C:/Users/human-02/.p2/pool/plugins/org.apache.xml.serializer_2.7.1.v201005080400.jar,4,false
 org.apache.xmlgraphics,2.9.0.v20230916-1600,file:/C:/Users/human-02/.p2/pool/plugins/org.apache.xmlgraphics_2.9.0.v20230916-1600.jar,4,false
-org.apache.xmlrpc.client,3.1.3.v20160817-1930,file:/C:/Users/human-02/.p2/pool/plugins/org.apache.xmlrpc.client_3.1.3.v20160817-1930.jar,4,false
-org.apache.xmlrpc.common,3.1.3.v20181004-1955,file:/C:/Users/human-02/.p2/pool/plugins/org.apache.xmlrpc.common_3.1.3.v20181004-1955.jar,4,false
 org.apiguardian.api,1.1.2,file:/C:/Users/human-02/.p2/pool/plugins/org.apiguardian.api_1.1.2.jar,4,false
 org.eclipse.ant.core,3.7.200.v20231102-0934,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.ant.core_3.7.200.v20231102-0934.jar,4,false
 org.eclipse.ant.launching,1.4.200.v20231106-1112,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.ant.launching_1.4.200.v20231106-1112.jar,4,false
@@ -944,6 +943,7 @@ org.glassfish.hk2.osgi-resource-locator,2.5.0.v20161103-1916,file:/C:/Users/huma
 org.gradle.toolingapi,8.1.1.v20231117-1658,file:/C:/Users/human-02/.p2/pool/plugins/org.gradle.toolingapi_8.1.1.v20231117-1658.jar,4,false
 org.hamcrest,2.2.0,file:/C:/Users/human-02/.p2/pool/plugins/org.hamcrest_2.2.0.jar,4,false
 org.hamcrest.core,2.2.0.v20230809-1000,file:/C:/Users/human-02/.p2/pool/plugins/org.hamcrest.core_2.2.0.v20230809-1000.jar,4,false
+org.insightech.er,1.0.0.v20150619-0219,file:/C:/Users/human-02/.p2/pool/plugins/org.insightech.er_1.0.0.v20150619-0219.jar,4,false
 org.jacoco.agent,0.8.11.202310140853,file:/C:/Users/human-02/.p2/pool/plugins/org.jacoco.agent_0.8.11.202310140853.jar,4,false
 org.jacoco.core,0.8.11.202310140853,file:/C:/Users/human-02/.p2/pool/plugins/org.jacoco.core_0.8.11.202310140853.jar,4,false
 org.jacoco.report,0.8.11.202310140853,file:/C:/Users/human-02/.p2/pool/plugins/org.jacoco.report_0.8.11.202310140853.jar,4,false

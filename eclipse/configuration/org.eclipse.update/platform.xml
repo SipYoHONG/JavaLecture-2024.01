@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config date="1706572349048" transient="false">
-	<site updateable="true" url="file:/C:/Users/human-02/.p2/pool/" enabled="true" policy="MANAGED-ONLY">
+<config date="1706752436371" transient="false">
+	<site updateable="true" url="file:../../../../.p2\pool\" enabled="true" policy="MANAGED-ONLY">
 		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.14.1900.v20230715-1945" url="features/org.eclipse.ecf.filetransfer.feature_3.14.1900.v20230715-1945/">
 		</feature>
 		<feature id="org.eclipse.emf" version="2.36.0.v20231107-0612" url="features/org.eclipse.emf_2.36.0.v20231107-0612/">
@@ -292,6 +292,8 @@
 		<feature id="org.eclipse.mylyn.git.feature" version="4.1.0.v20231125-1125" url="features/org.eclipse.mylyn.git.feature_4.1.0.v20231125-1125/" plugin-identifier="org.eclipse.mylyn.versions.core">
 		</feature>
 		<feature id="org.eclipse.oomph.p2" version="1.28.0.v20231120-1324" url="features/org.eclipse.oomph.p2_1.28.0.v20231120-1324/">
+		</feature>
+		<feature id="org.insightech.er.feature" version="1.0.0.v20150619-0219" url="features/org.insightech.er.feature_1.0.0.v20150619-0219/" plugin-identifier="org.insightech.er">
 		</feature>
 		<feature id="org.eclipse.mylyn.builds.feature" version="4.1.0.v20231009-0014" url="features/org.eclipse.mylyn.builds.feature_4.1.0.v20231009-0014/" plugin-identifier="org.eclipse.mylyn.builds.core">
 		</feature>
