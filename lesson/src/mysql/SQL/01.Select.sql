@@ -79,4 +79,3 @@ SELECT * FROM city WHERE countrycode='KOR'
 # 국내 인구수 Top 11~20 도시
 SELECT * FROM city WHERE countrycode='KOR'
     ORDER BY population DESC LIMIT 10 OFFSET 10;
-    d
