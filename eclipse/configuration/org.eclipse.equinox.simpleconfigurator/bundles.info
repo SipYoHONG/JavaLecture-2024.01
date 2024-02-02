@@ -717,7 +717,7 @@ org.eclipse.mylyn.wikitext.twiki.ui,3.0.48.202308291007,file:/C:/Users/human-02/
 org.eclipse.mylyn.wikitext.ui,3.0.48.202308291007,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.mylyn.wikitext.ui_3.0.48.202308291007.jar,4,false
 org.eclipse.nebula.cwt,1.1.0.202303072132,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.nebula.cwt_1.1.0.202303072132.jar,4,false
 org.eclipse.nebula.widgets.cdatetime,1.5.0.202303072132,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.nebula.widgets.cdatetime_1.5.0.202303072132.jar,4,false
-org.eclipse.nebula.widgets.tablecombo,1.2.0.202312260654,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.nebula.widgets.tablecombo_1.2.0.202312260654.jar,4,false
+org.eclipse.nebula.widgets.tablecombo,1.2.0.202401301859,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.nebula.widgets.tablecombo_1.2.0.202401301859.jar,4,false
 org.eclipse.oomph.base,1.18.0.v20230617-1322,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.base_1.18.0.v20230617-1322.jar,4,false
 org.eclipse.oomph.base.edit,1.17.0.v20230617-1322,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.base.edit_1.17.0.v20230617-1322.jar,4,false
 org.eclipse.oomph.extractor.lib,1.9.0.v20220421-1218,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.extractor.lib_1.9.0.v20220421-1218.jar,4,false
@@ -725,15 +725,15 @@ org.eclipse.oomph.jreinfo,1.18.0.v20230817-0718,file:/C:/Users/human-02/.p2/pool
 org.eclipse.oomph.jreinfo.ui,1.15.0.v20220520-1242,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.jreinfo.ui_1.15.0.v20220520-1242.jar,4,false
 org.eclipse.oomph.jreinfo.win32.x86_64,1.8.0.v20220421-1218,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.jreinfo.win32.x86_64_1.8.0.v20220421-1218.jar,4,false
 org.eclipse.oomph.p2,1.17.0.v20230617-1322,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.p2_1.17.0.v20230617-1322.jar,4,false
-org.eclipse.oomph.p2.core,1.27.0.v20231120-1324,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.p2.core_1.27.0.v20231120-1324.jar,4,false
+org.eclipse.oomph.p2.core,1.28.0.v20240120-1356,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.p2.core_1.28.0.v20240120-1356.jar,4,false
 org.eclipse.oomph.p2.doc,1.14.0.v20230625-0755,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.p2.doc_1.14.0.v20230625-0755.jar,4,false
 org.eclipse.oomph.p2.edit,1.17.0.v20230204-0932,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.p2.edit_1.17.0.v20230204-0932.jar,4,false
 org.eclipse.oomph.p2.ui,1.21.0.v20230828-1517,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.p2.ui_1.21.0.v20230828-1517.jar,4,false
 org.eclipse.oomph.predicates,1.17.0.v20230617-1322,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.predicates_1.17.0.v20230617-1322.jar,4,false
 org.eclipse.oomph.predicates.edit,1.15.0.v20230416-0642,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.predicates.edit_1.15.0.v20230416-0642.jar,4,false
 org.eclipse.oomph.preferences,1.14.0.v20230617-1322,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.preferences_1.14.0.v20230617-1322.jar,4,false
-org.eclipse.oomph.resources,1.19.0.v20231111-1149,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.resources_1.19.0.v20231111-1149.jar,4,false
-org.eclipse.oomph.resources.edit,1.13.0.v20230204-0932,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.resources.edit_1.13.0.v20230204-0932.jar,4,false
+org.eclipse.oomph.resources,1.20.0.v20240130-1324,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.resources_1.20.0.v20240130-1324.jar,4,false
+org.eclipse.oomph.resources.edit,1.14.0.v20240130-1324,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.resources.edit_1.14.0.v20240130-1324.jar,4,false
 org.eclipse.oomph.setup,1.28.0.v20231119-1528,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.setup_1.28.0.v20231119-1528.jar,4,false
 org.eclipse.oomph.setup.core,1.29.0.v20231119-1541,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.setup.core_1.29.0.v20231119-1541.jar,4,false
 org.eclipse.oomph.setup.doc,1.14.0.v20230618-0610,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.setup.doc_1.14.0.v20230618-0610.jar,4,false
@@ -742,9 +742,9 @@ org.eclipse.oomph.setup.editor,1.27.0.v20231119-1528,file:/C:/Users/human-02/.p2
 org.eclipse.oomph.setup.p2,1.20.0.v20230617-1322,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.setup.p2_1.20.0.v20230617-1322.jar,4,false
 org.eclipse.oomph.setup.p2.edit,1.16.0.v20230617-1322,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.setup.p2.edit_1.16.0.v20230617-1322.jar,4,false
 org.eclipse.oomph.setup.sync,1.15.0.v20231119-1528,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.setup.sync_1.15.0.v20231119-1528.jar,4,false
-org.eclipse.oomph.setup.ui,1.28.0.v20231122-0734,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.setup.ui_1.28.0.v20231122-0734.jar,4,false
+org.eclipse.oomph.setup.ui,1.29.0.v20240120-1356,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.setup.ui_1.29.0.v20240120-1356.jar,4,false
 org.eclipse.oomph.setup.ui.questionnaire,1.13.0.v20220421-1218,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.setup.ui.questionnaire_1.13.0.v20220421-1218.jar,4,false
-org.eclipse.oomph.ui,1.20.0.v20231113-1111,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.ui_1.20.0.v20231113-1111.jar,4,false
+org.eclipse.oomph.ui,1.21.0.v20240120-1356,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.ui_1.21.0.v20240120-1356.jar,4,false
 org.eclipse.oomph.util,1.21.0.v20231205-1338,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.util_1.21.0.v20231205-1338.jar,4,false
 org.eclipse.oomph.workingsets,1.14.0.v20230617-1322,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.workingsets_1.14.0.v20230617-1322.jar,4,false
 org.eclipse.oomph.workingsets.edit,1.13.0.v20230204-0932,file:/C:/Users/human-02/.p2/pool/plugins/org.eclipse.oomph.workingsets.edit_1.13.0.v20230204-0932.jar,4,false
@@ -944,6 +944,7 @@ org.glassfish.hk2.osgi-resource-locator,2.5.0.v20161103-1916,file:/C:/Users/huma
 org.gradle.toolingapi,8.1.1.v20231117-1658,file:/C:/Users/human-02/.p2/pool/plugins/org.gradle.toolingapi_8.1.1.v20231117-1658.jar,4,false
 org.hamcrest,2.2.0,file:/C:/Users/human-02/.p2/pool/plugins/org.hamcrest_2.2.0.jar,4,false
 org.hamcrest.core,2.2.0.v20230809-1000,file:/C:/Users/human-02/.p2/pool/plugins/org.hamcrest.core_2.2.0.v20230809-1000.jar,4,false
+org.insightech.er,1.0.0.v20150619-0219,file:/C:/Users/human-02/.p2/pool/plugins/org.insightech.er_1.0.0.v20150619-0219.jar,4,false
 org.jacoco.agent,0.8.11.202310140853,file:/C:/Users/human-02/.p2/pool/plugins/org.jacoco.agent_0.8.11.202310140853.jar,4,false
 org.jacoco.core,0.8.11.202310140853,file:/C:/Users/human-02/.p2/pool/plugins/org.jacoco.core_0.8.11.202310140853.jar,4,false
 org.jacoco.report,0.8.11.202310140853,file:/C:/Users/human-02/.p2/pool/plugins/org.jacoco.report_0.8.11.202310140853.jar,4,false
