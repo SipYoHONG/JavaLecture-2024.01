@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config date="1706572349048" transient="false">
-	<site updateable="true" url="file:/C:/Users/human-02/.p2/pool/" enabled="true" policy="MANAGED-ONLY">
+<config date="1707092613918" transient="false">
+	<site updateable="true" url="file:../../../../.p2\pool\" enabled="true" policy="MANAGED-ONLY">
 		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.14.1900.v20230715-1945" url="features/org.eclipse.ecf.filetransfer.feature_3.14.1900.v20230715-1945/">
 		</feature>
 		<feature id="org.eclipse.emf" version="2.36.0.v20231107-0612" url="features/org.eclipse.emf_2.36.0.v20231107-0612/">
@@ -32,6 +32,8 @@
 		<feature id="org.eclipse.eclemma.feature" version="3.1.8.202311140945" url="features/org.eclipse.eclemma.feature_3.1.8.202311140945/" plugin-identifier="org.eclipse.eclemma.ui">
 		</feature>
 		<feature id="org.eclipse.datatools.enablement.oda.designer.feature" version="1.15.0.202311071249" url="features/org.eclipse.datatools.enablement.oda.designer.feature_1.15.0.202311071249/" plugin-identifier="org.eclipse.datatools.enablement.oda.xml.ui">
+		</feature>
+		<feature id="org.eclipse.oomph.setup" version="1.31.0.v20240120-1356" url="features/org.eclipse.oomph.setup_1.31.0.v20240120-1356/">
 		</feature>
 		<feature id="org.eclipse.emf.edit" version="2.21.0.v20231107-0612" url="features/org.eclipse.emf.edit_2.21.0.v20231107-0612/">
 		</feature>
@@ -82,6 +84,8 @@
 		<feature id="org.eclipse.jpt.jpa.feature" version="3.7.0.v202308172102" url="features/org.eclipse.jpt.jpa.feature_3.7.0.v202308172102/" plugin-identifier="org.eclipse.jpt.jpa.branding">
 		</feature>
 		<feature id="org.eclipse.egit" version="6.8.0.202311291450-r" url="features/org.eclipse.egit_6.8.0.202311291450-r/">
+		</feature>
+		<feature id="org.eclipse.oomph.p2" version="1.29.0.v20240120-1356" url="features/org.eclipse.oomph.p2_1.29.0.v20240120-1356/">
 		</feature>
 		<feature id="org.eclipse.emf.mapping.ui" version="2.15.0.v20230211-1150" url="features/org.eclipse.emf.mapping.ui_2.15.0.v20230211-1150/">
 		</feature>
@@ -211,8 +215,6 @@
 		</feature>
 		<feature id="org.eclipse.datatools.enablement.jdt.feature" version="1.15.0.202311071249" url="features/org.eclipse.datatools.enablement.jdt.feature_1.15.0.202311071249/" plugin-identifier="org.eclipse.datatools.enablement.jdt.classpath">
 		</feature>
-		<feature id="org.eclipse.oomph.setup" version="1.30.0.v20231122-0734" url="features/org.eclipse.oomph.setup_1.30.0.v20231122-0734/">
-		</feature>
 		<feature id="org.eclipse.wildwebdeveloper.xml.feature" version="1.3.1.202310310352" url="features/org.eclipse.wildwebdeveloper.xml.feature_1.3.1.202310310352/">
 		</feature>
 		<feature id="org.eclipse.jst.server_adapters.feature" version="3.32.0.v202311141839" url="features/org.eclipse.jst.server_adapters.feature_3.32.0.v202311141839/">
@@ -291,7 +293,7 @@
 		</feature>
 		<feature id="org.eclipse.mylyn.git.feature" version="4.1.0.v20231125-1125" url="features/org.eclipse.mylyn.git.feature_4.1.0.v20231125-1125/" plugin-identifier="org.eclipse.mylyn.versions.core">
 		</feature>
-		<feature id="org.eclipse.oomph.p2" version="1.28.0.v20231120-1324" url="features/org.eclipse.oomph.p2_1.28.0.v20231120-1324/">
+		<feature id="org.insightech.er.feature" version="1.0.0.v20150619-0219" url="features/org.insightech.er.feature_1.0.0.v20150619-0219/" plugin-identifier="org.insightech.er">
 		</feature>
 		<feature id="org.eclipse.mylyn.builds.feature" version="4.1.0.v20231009-0014" url="features/org.eclipse.mylyn.builds.feature_4.1.0.v20231009-0014/" plugin-identifier="org.eclipse.mylyn.builds.core">
 		</feature>
