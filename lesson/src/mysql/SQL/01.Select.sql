@@ -192,3 +192,11 @@ SELECT r.Name countryName, l.Name cityName, l.Population, o.`Language`   FROM ci
 	WHERE r.continent='Asia' AND o.IsOfficial='T'
 	ORDER BY l.Population DESC 
 	LIMIT 10; 
+
+/*
+ * 1.8 Sub Query
+ */
+# 국내 도시만으로 새로운 테이블을 만드는 경우
+CREATE TABLE if NOT EXISTS kcity LIKE city;
+INSERT INTO kcity
+    SELECT * FROM city WHERE countrycode='KOR';
