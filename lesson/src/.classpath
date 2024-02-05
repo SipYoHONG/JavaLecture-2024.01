@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path=""/>
 	<classpathentry kind="lib" path="C:/Users/human-02/Documents/GitHub/JavaLecture-2024.01/json-simple-1.1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/human-02/Documents/GitHub/JavaLecture-2024.01/jsoup-1.17.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/human-02/Documents/GitHub/JavaLecture-2024.01/mysql-connector-j-8.3.0.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
