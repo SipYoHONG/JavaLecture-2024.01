@@ -1,5 +1,9 @@
 host=localhost
+
 port=3306
+
 database=world
+
 user=hmuser
+
 password=hmpass
