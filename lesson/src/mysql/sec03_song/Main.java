@@ -7,34 +7,25 @@ public class Main {
 	public static void main(String[] args) {
 		SongDao songDao = new SongDao();
 		
-		Song song = songDao.getSongBySid(102);
+		Song song = songDao.getSongBySid(101);
 		System.out.println(song);
 		
-//		song = songDao.getSongByTitle("Gee");
-//		System.out.println(song);
-//		System.out.println("=====================================================================================");
-//		
-//		List<Song> list = songDao.getSongListAll();
+		song = songDao.getSongByTitle("별빛");
+		System.out.println(song);
+		System.out.println("==========================================");
 		
-//		song = new Song(117, "비행기", "비행기를 타고가요");
+//		song = new Song(117, "Hypeboy", "하 하 하 하입보이");
 //		songDao.insertSong(song);
+		song = songDao.getSongBySid(117);
+		song.setTitle("Hype Boy");
+		song.setLyrics("너 없이는 매일 매일이 yeah 재미없어 어쩌지");
+		songDao.updateSong(song);
+		
+		songDao.deleteSong(117);
+		
+		List<Song> list = songDao.getSongListAll();
+		list.forEach(x -> System.out.println(x));
 
-//		song = songDao.getSongBySid(118);
-//		song.setTitle("주문");
-//		song.setLyrics("넌 내게 빠져");
-//		songDao.updateSong(song);
-//
-//		songDao.deleteSong(119);
-//		
-//		list = songDao.getSongListByLyrics("뉴예삐오");
-//		list.forEach(x -> System.out.println(x));
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }

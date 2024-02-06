@@ -20,7 +20,7 @@ public class CityDao {
 	private String password;
 
 	public CityDao() {
-		String path = "C:/Users/ghghg/Documents/GitHub/JavaLecture-2024.01/lesson/src/mysql/mysql.properties";
+		String path = "C:/Users/human_02/Documents/GitHub/JavaLecture-2024.01/lesson/src/mysql/mysql.properties";
 		try {
 			Properties prop = new Properties();
 			prop.load(new FileInputStream(path));

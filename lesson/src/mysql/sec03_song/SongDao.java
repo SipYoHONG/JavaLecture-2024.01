@@ -14,6 +14,7 @@ public class SongDao {
 	private String connStr;
 	private String user;
 	private String password;
+	private Connection conn;
 
 	public SongDao() {
 //		String path = "C:/Users/ghghg/Documents/GitHub/JavaLecture-2024.01/lesson/src/mysql/mysql.properties";
@@ -21,36 +22,36 @@ public class SongDao {
 		try {
 			Properties prop = new Properties();
 			prop.load(new FileInputStream(path));
-
+			
 			String host = prop.getProperty("host");
 			String port = prop.getProperty("port");
 			String database = prop.getProperty("database");
 			this.connStr = "jdbc:mysql://" + host + ":" + port + "/" + database;
 			this.user = prop.getProperty("user");
 			this.password = prop.getProperty("password");
+			this.conn = DriverManager.getConnection(connStr, user, password);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
-	public Connection myConnection() {
-		Connection conn = null;
+	
+	public void close() {
 		try {
-			conn = DriverManager.getConnection(connStr, user, password);
+			conn.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return conn;
 	}
-
+	
 	public Song getSongBySid(int sid) {
-		Connection conn = myConnection();
 		String sql = "select * from song where sid=?";
-		Song song = null;		
+		Song song = null;
 		try {
+			// 파라메터 세팅
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, sid);
-
+			
+			// SQL 실행 후 결과를 ResultSet에 받기
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				sid = rs.getInt(1);
@@ -58,126 +59,103 @@ public class SongDao {
 				String lyrics = rs.getString(3);
 				song = new Song(sid, title, lyrics);
 			}
-			rs.close(); pstmt.close(); conn.close();
+			rs.close(); pstmt.close(); 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return song;
 	}
 
-//	public Song getSongByTitle(String title) {
-//		Connection conn = myConnection();
-//		String sql = "select * from song where title=?";
-//		Song song = null;
-//		try {
-//			PreparedStatement pstmt = conn.prepareStatement(sql);
-//			pstmt.setString(1, title);
-//
-//			ResultSet rs = pstmt.executeQuery();
-//			while (rs.next()) {
-//				song = new Song(rs.getInt(1), rs.getString(2), rs.getString(3));
-//			}
-//			rs.close();
-//			pstmt.close();
-//			conn.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return song;
-//	}
-//
-//	public List<Song> getSongListAll() {
-//		Connection conn = myConnection();
-//		String sql = "select * from song";
-//		List<Song> list = new ArrayList<Song>();
-//		try {
-//			Statement stmt = conn.createStatement();
-//			ResultSet rs = stmt.executeQuery(sql);
-//			while (rs.next()) {
-//				Song song = new Song(rs.getInt(1), rs.getString(2), rs.getString(3));
-//				list.add(song);
-//			}
-//			rs.close();
-//			stmt.close();
-//			conn.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return list;
-//	}
-//
-//	public List<Song> getSongListByLyrics(String lyrics) {
-//		Connection conn = myConnection();
-//		String sql = "select * from song where lyrics=?";
-//		List<Song> list = new ArrayList<Song>();
-//		try {
-//			PreparedStatement pstmt = conn.prepareStatement(sql);
-//			pstmt.setString(1, lyrics);
-//
-//			ResultSet rs = pstmt.executeQuery();
-//			while (rs.next()) {
-//				Song song = new Song(rs.getInt(1), rs.getString(2), rs.getString(3));
-//				list.add(song);
-//			}
-//			rs.close();
-//			pstmt.close();
-//			conn.close();
-//
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return list;
-//	}
-//
-//	public void insertSong(Song song) {
-//		Connection conn = myConnection();
-//		String sql = "insert into song values(default, ?, ?)";
-//		try {
-//			PreparedStatement pstmt = conn.prepareStatement(sql);
-//			pstmt.setString(1, song.getTitle());
-//			pstmt.setString(2, song.getLyrics());
-//
-//			pstmt.executeUpdate();
-//
-//			pstmt.close();
-//			conn.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	public void updateSong(Song song) {
-//		Connection conn = myConnection();
-//		String sql = "update song set title=?, lyrics=? where sid=?";
-//		try {
-//			PreparedStatement pstmt = conn.prepareStatement(sql);
-//			pstmt.setString(1, song.getTitle());
-//			pstmt.setString(2, song.getLyrics());
-//			pstmt.setInt(3, song.getSid());
-//
-//			pstmt.executeUpdate();
-//
-//			pstmt.close();
-//			conn.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
-//	public void deleteSong(int Sid) {
-//		Connection conn = myConnection();
-//		String sql = "delete from song where Sid=?";
-//		try {
-//			PreparedStatement pstmt = conn.prepareStatement(sql);
-//			pstmt.setInt(1, Sid);
-//
-//			pstmt.executeUpdate();
-//
-//			pstmt.close();
-//			conn.close();
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//	}
-//
+	public Song getSongByTitle(String title) {
+		String sql = "select * from song where title like ?";
+		Song song = null;
+		try {
+			// 파라메터 세팅
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "%" + title + "%");			// %별빛% - 제목에 별빛 검색
+			
+			// SQL 실행 후 결과를 ResultSet에 받기
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				int sid = rs.getInt(1);
+				title = rs.getString(2);
+				String lyrics = rs.getString(3);
+				song = new Song(sid, title, lyrics);
+			}
+			rs.close(); pstmt.close(); 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return song;
+	}
+	
+	public List<Song> getSongListAll() {
+		String sql = "select * from song";
+		List<Song> list = new ArrayList<Song>();
+		try {
+			Statement stmt = conn.createStatement();
+			// SQL 실행 후 결과를 ResultSet에 받기
+			ResultSet rs = stmt.executeQuery(sql);
+			while (rs.next()) {
+				int sid = rs.getInt(1);
+				String title = rs.getString(2);
+				String lyrics = rs.getString(3);
+				Song song = new Song(sid, title, lyrics);
+				list.add(song);
+			}
+			rs.close(); stmt.close(); 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	
+	public void insertSong(Song song) {
+		String sql = "insert song values(default, ?, ?)";
+		try {
+			// 파라메터 세팅
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, song.getTitle());
+			pstmt.setString(2, song.getLyrics());
+			
+			// SQL 실행
+			pstmt.executeUpdate();
+			pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void updateSong(Song song) {
+		String sql = "update song set title=?, lyrics=? where sid=?";
+		try {
+			// 파라메터 세팅
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, song.getTitle());
+			pstmt.setString(2, song.getLyrics());
+			pstmt.setInt(3, song.getSid());
+			
+			// SQL 실행
+			pstmt.executeUpdate();
+			pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	} 
+	
+	public void deleteSong(int sid) {
+		String sql = "delete from song where sid=?";
+		try {
+			// 파라메터 세팅
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, sid);
+			
+			// SQL 실행
+			pstmt.executeUpdate();
+			pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }
