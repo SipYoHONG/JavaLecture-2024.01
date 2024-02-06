@@ -7,7 +7,7 @@
 */
 CREATE TABLE if NOT EXISTS dateTable (
     id INT primary key auto_increment, 
-    regDate DATE default (current_date),
+    regDate DATE default (CURRENT_DATE),
     modTime datetime default currnet_timestamp
 );
 

@@ -27,4 +27,20 @@ UPDATE kcity SET population=population+100000 WHERE id>2390;
 # 경기도 화성시, 의정부시 추가
 INSERT INTO kcity 
     VALUES (default, 'Hwaseong', 'KOR' , 'Kyonggi', 900000),
-           (default, 'Uijeongbu', 'KOR' , 'Kyonggi', 460000)
+           (default, 'Uijeongbu', 'KOR' , 'Kyonggi', 460000);
+
+# 강원도 속초시 추가 - default value 활용(auto_increment 포함)
+INSERT INTO kcity (name, countrycode, district) VALUES('Sokcho', 'KOR', 'Kang-won');
+SELECT * FROM kcity;
+
+# 경기도 광주시 추가 - auto_increment 속성이 설정되어 있어도 ID값을 임의로 부여 가능
+INSERT INTO kcity
+    VALUES (2600, 'Kwangju', 'KOR', 'Kyonggi', 300000);
+
+/*
+*   4. Delete
+*
+*       DELETE FROM 테이블명 WHERE 조건;            # 조건 - primary key = value
+*/
+
+DELETE FROM kcity WHERE id=2601;
