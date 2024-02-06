@@ -7,14 +7,14 @@ public class Main {
 	public static void main(String[] args) {
 		SongDao songDao = new SongDao();
 		
-		Song song = songDao.getSongBySid(101);
+		Song song = songDao.getSongBySid(102);
 		System.out.println(song);
 		
-		song = songDao.getSongByTitle("Gee");
-		System.out.println(song);
-		System.out.println("=====================================================================================");
-		
-		List<Song> list = songDao.getSongListAll();
+//		song = songDao.getSongByTitle("Gee");
+//		System.out.println(song);
+//		System.out.println("=====================================================================================");
+//		
+//		List<Song> list = songDao.getSongListAll();
 		
 //		song = new Song(117, "비행기", "비행기를 타고가요");
 //		songDao.insertSong(song);
@@ -27,7 +27,7 @@ public class Main {
 //		songDao.deleteSong(119);
 //		
 //		list = songDao.getSongListByLyrics("뉴예삐오");
-		list.forEach(x -> System.out.println(x));
+//		list.forEach(x -> System.out.println(x));
 		
 		
 		

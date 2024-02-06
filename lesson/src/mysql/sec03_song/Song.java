@@ -12,11 +12,6 @@ public class Song {
 		this.lyrics = lyrics;	
 	}
 	
-	public Song(String title, String lyrics) {
-		this.title = title;
-		this.lyrics = lyrics;	
-	}
-	
 	@Override
 	public String toString() {
 		return "song [sid=" + sid + ", title=" + title + ", lyrics=" + lyrics + "]";
