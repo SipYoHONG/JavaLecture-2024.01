@@ -22,6 +22,9 @@ public class UserServiceMySQLImpl implements UserService {
 
 	@Override
 	public void registerUser(User user) {	// user는 아직 암호화된 패스워드가 없다고 가정
+		User u = userDao.getUserByUid(user.getUid());		// uid 중복 확인
+		if(u != null)
+			return;
 		String hasgedPwd = BCrypt.hashpw(user.getPwd(), BCrypt.gensalt());
 		user.setPwd(hasgedPwd);
 		userDao.insertUser(user);
