@@ -46,12 +46,12 @@ public class UserDao {
 		}
 	}
 
-	public User getUserByUid(int uid) {
+	public User getUserByUid(String uid) {
 		String sql = "select * from users where uid=?";
 		User user = null;
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, uid);
+			pstmt.setString(1, uid);
 			
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
@@ -66,7 +66,8 @@ public class UserDao {
 	}
 	
 	public List<User> getUserList(int num, int offset) {
-		String sql = "select * from users where isDeleted=0 " + " order by regDate desc limit ? offset ?";
+		String sql = "select * from users where isDeleted=0 "
+					+ " order by regDate desc, uid limit ? offset ?";
 		List<User> list = new ArrayList<User>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);

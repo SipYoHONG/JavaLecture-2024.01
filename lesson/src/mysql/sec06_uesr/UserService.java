@@ -2,16 +2,19 @@ package mysql.sec06_uesr;
 
 import java.util.List;
 
-public interface UserSevice {
+public interface UserService {
 
 	public static final int CORRECT_LOGIN = 0;
 	public static final int WRONG_PASSWORD = 1;
 	public static final int USER_NOT_EXIST = 2;
-	public static final int COUNT_PER_PAGE = 10;
+	public static final int COUNT_PER_PAGE = 2;
 
-	void registerUser(User user);
+
+	User getUserByUid(String uid);
 
 	List<User> getUserList(int page);
+	
+	void registerUser(User user);
 
 	void updateUser(User user);
 

@@ -4,3 +4,5 @@
 /UserSevice.class
 /UserSevice$UserService.class
 /UserDao.class
+/UserServiceMySQLImpl.class
+/UserTest.class

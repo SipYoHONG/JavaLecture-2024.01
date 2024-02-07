@@ -20,6 +20,13 @@ public class User {
 	private int isDeleted;
 	
 	public User() { }
+	public User(String uid, String pwd, String uname, String email) {
+		this.uid = uid;
+		this.pwd = pwd;
+		this.uname = uname;
+		this.email = email;
+	}
+	
 	public User(String uid, String pwd, String uname, String email, LocalDate regDate, int isDeleted) {
 		this.uid = uid;
 		this.pwd = pwd;
@@ -28,7 +35,7 @@ public class User {
 		this.regDate = regDate;
 		this.isDeleted = isDeleted;
 	}
-	
+		
 	@Override
 	public String toString() {
 		return "User [uid=" + uid + ", uname=" + uname + ", email=" + email + ", regDate=" + regDate
