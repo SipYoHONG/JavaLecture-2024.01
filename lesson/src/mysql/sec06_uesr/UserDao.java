@@ -1,4 +1,4 @@
-package mysql.sec04_girl_group;
+package mysql.sec06_uesr;
 
 import java.io.FileInputStream;
 import java.sql.Connection;
@@ -6,17 +6,20 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-public class GirlGroupDao {
+import mysql.sec04_girl_group.GirlGroup;
+
+public class UserDao {
 	private String connStr;
 	private String user;
 	private String password;
 	private Connection conn;
 
-	public GirlGroupDao() {
+	public UserDao() {
 //		String path = "C:/Users/ghghg/Documents/GitHub/JavaLecture-2024.01/lesson/src/mysql/mysql.properties";
 		String path = "C:/Users/human-02/Documents/GitHub/JavaLecture-2024.01/lesson/src/mysql/mysql.properties";
 		try {
@@ -43,83 +46,54 @@ public class GirlGroupDao {
 		}
 	}
 
-	public GirlGroup getGirlGroupByGid(int gid) {
-		String sql = "select * from girl_group where gid=?";
-		GirlGroup gg = new GirlGroup();
+	public User getUserByUid(int uid) {
+		String sql = "select * from users where uid=?";
+		User user = null;
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, gid);
-
+			pstmt.setInt(1, uid);
+			
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				gg.setGid(rs.getInt(1));
-				gg.setName(rs.getString(2));
-				// gg.setDebut(LocalDate)
-				String debutStr = rs.getString(3); // yyyy-mm-dd
-				gg.setDebut(LocalDate.parse(debutStr));
-				gg.setHitSongId(rs.getInt(4));
+				user = new User(rs.getString(1), rs.getString(2), rs.getString(3), 
+						rs.getString(4), LocalDate.parse(rs.getString(5)), rs.getInt(6));
 			}
+			rs.close(); pstmt.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return gg;
+		return user;
 	}
-
-	public GirlGroup getGirlGroupByName(String name) {
-		String sql = "SELECT l.gid, l.name, l.debut, r.title FROM girl_group l" + " JOIN song r ON l.hit_song_id=r.sid"
-				+ " WHERE l.name LIKE ?";
-		GirlGroup gg = new GirlGroup();
+	
+	public List<User> getUserList(int num, int offset) {
+		String sql = "select * from users where isDeleted=0 " + " order by regDate desc limit ? offset ?";
+		List<User> list = new ArrayList<User>();
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "%" + name + "%");
+			pstmt.setInt(1, num);
+			pstmt.setInt(2, offset);
 
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
-				gg.setGid(rs.getInt(1));
-				gg.setName(rs.getString(2));
-				gg.setDebut(LocalDate.parse(rs.getString(3)));
-				gg.setHitSongTitle(rs.getString(4));
+				User uers = new User(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),
+						LocalDate.parse(rs.getString(5)), rs.getInt(6));
+				list.add(uers);
 			}
-			rs.close();
-			pstmt.close();
+			rs.close(); pstmt.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return gg;
-	}
-
-	public List<GirlGroup> getGirlGroupByDebut(int fromYear, int toYear) {
-		String sql = "SELECT l.gid, l.name, l.debut, r.title FROM girl_group l "
-				+ " JOIN song r ON l.hit_song_id=r.sid " + " WHERE debut BETWEEN ? AND ? ";
-		List<GirlGroup> list = new ArrayList<GirlGroup>();
-		try {
-			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, fromYear + "-01-01");
-			pstmt.setString(2, toYear + "-12-31");
-
-			ResultSet rs = pstmt.executeQuery();
-			while (rs.next()) {
-				GirlGroup gg = new GirlGroup(rs.getInt(1), rs.getString(2), LocalDate.parse(rs.getString(3)),
-						rs.getString(4));
-				list.add(gg);
-			}
-			rs.close();
-			pstmt.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
 		return list;
-
 	}
 
-	public void insertGirlGroup(GirlGroup gg) {
-		String sql = "insert into girl_group values(default, ?, ?, ?)";
+	public void insertUser(User user) {
+		String sql = "insert users values (?, ?, ?, ? , default, default)";
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, gg.getName());
-			pstmt.setString(2, gg.getDebut().toString());
-			pstmt.setInt(3, gg.getHitSongId());
+			pstmt.setString(1, user.getUid());
+			pstmt.setString(2, user.getPwd());
+			pstmt.setString(3, user.getUname());
+			pstmt.setString(4, user.getEmail());
 
 			pstmt.executeUpdate();
 			pstmt.close();
@@ -128,4 +102,32 @@ public class GirlGroupDao {
 		}
 	}
 
+	public void updateUser(User user) {
+		String sql = "update users set pwd=?, uname=?, email=? where uid=?";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getPwd());
+			pstmt.setString(2, user.getUname());
+			pstmt.setString(3, user.getEmail());
+			pstmt.setString(4, user.getUid());
+
+			pstmt.executeUpdate();
+			pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void deleteUser(String uid) {
+		String sql = "update users set isDeleted=1 where uid=?";
+		try {
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, uid);
+
+			pstmt.executeUpdate();
+			pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }
